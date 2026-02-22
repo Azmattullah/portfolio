@@ -1,7 +1,8 @@
 import './ProfileHeader.css';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaPinterestP } from 'react-icons/fa';
+import { FaInstagram, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { MdOutlineEmail, MdLocationOn, MdOutlineFileDownload } from 'react-icons/md';
 import { userData } from '../data/userData';
+import { GiMailbox } from 'react-icons/gi';
 
 const ProfileHeader = () => {
     const { profile } = userData;
@@ -19,11 +20,9 @@ const ProfileHeader = () => {
                     <h1>{profile.name}</h1>
                     <p className="subtitle">{profile.title}</p>
                     <div className="social-links">
-                        <a href="#"><FaFacebookF /></a>
-                        <a href="#"><FaTwitter /></a>
-                        <a href="#"><FaInstagram /></a>
-                        <a href="#"><FaLinkedinIn /></a>
-                        <a href="#"><FaPinterestP /></a>
+                        <a href="https://github.com/Azmattullah"><FaGithub /></a>
+                        <a href="https://www.linkedin.com/in/md-azmattullah"><FaLinkedinIn /></a>
+                        <a href="https://www.instagram.com/the_azmat"><FaInstagram /></a>
                     </div>
                 </div>
             </div>

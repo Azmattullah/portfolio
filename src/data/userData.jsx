@@ -1,13 +1,15 @@
 import { MdOutlineLoop, MdOutlineCloudSync, MdOutlineMonitorHeart, MdCode } from 'react-icons/md';
+import profileImg from '../assets/images/profile-img.jpg';
+
 
 export const userData = {
     profile: {
-        name: "Aditya Pratama",
+        name: "Md Azmattullah",
         title: "DevOps | SRE | Cloud Engineer",
-        email: "aditya@adityacprtm.dev",
-        location: "Jakarta, ID",
-        statusEmoji: "🍉",
-        avatarUrl: "https://i.pravatar.cc/150?img=11",
+        email: "azmattullah100@gmail.com",
+        location: "Chennai, India",
+        statusEmoji: "OPEN TO WORK",
+        avatarUrl: profileImg,  
     },
     about: {
         paragraphs: [
@@ -43,8 +45,8 @@ export const userData = {
         }
     ],
     clients: [
-        { id: 1, name: "Transletin", color: "#6a35ff" },
-        { id: 2, name: "Buangdisini", color: "#a0ff3c" }
+        { id: 1, name: "Codezin", color: "#ffc400ff" },
+        { id: 2, name: "Bestcast", color: "#ff3c3cff" }
     ],
     resume: {
         experience: [

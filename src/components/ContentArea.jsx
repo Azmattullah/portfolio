@@ -64,7 +64,7 @@ const ContentArea = () => {
                     ))}
                 </div>
 
-                <h3 className="sub-section-title">Clients</h3>
+                <h3 className="sub-section-title">Companies I've Worked With</h3>
                 <div className="clients-list">
                     {userData.clients.map((client) => (
                         <div key={client.id} className="client-logo">
