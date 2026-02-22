@@ -1,13 +1,16 @@
 .profile-header {
     background-color: var(--surface-color-1);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius-lg);
+    border: 2px solid var(--border-color);
+    /* Thicker retro border */
+    border-radius: 0;
+    /* No radius */
     padding: 2.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
-    box-shadow: var(--shadow-main);
+    box-shadow: 8px 8px 0px var(--border-color);
+    /* Retro block shadow */
     position: relative;
     z-index: 10;
 }
@@ -20,31 +23,30 @@
 }
 
 .profile-avatar-container {
-    background-color: var(--surface-color-2);
+    background-color: var(--bg-color);
     padding: 10px;
-    border-radius: var(--border-radius-lg);
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 0;
+    border: 2px dashed var(--border-color);
+    /* Dashed retro border */
+    box-shadow: none;
+    /* remove inner shadow */
 }
 
 .profile-avatar {
     width: 120px;
     height: 120px;
-    border-radius: var(--border-radius-sm);
+    border-radius: 0;
     overflow: hidden;
     position: relative;
+    border: 2px solid var(--border-color);
+    /* Frame around image */
+    filter: grayscale(100%) contrast(1.2) sepia(100%) hue-rotate(80deg) saturate(3);
+    /* Monotone green filter for image */
 }
 
-/* Background behind avatar like in screenshot */
+/* Background behind avatar removed to keep monochrome look */
 .profile-avatar::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #0077ff;
-    /* Blue background */
-    z-index: 0;
+    display: none;
 }
 
 .profile-avatar img {
@@ -57,13 +59,16 @@
 
 .profile-title h1 {
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 0.2rem;
+    color: var(--text-main);
+    text-shadow: 2px 2px 0px #005f18;
+    /* small drop shadow on text */
 }
 
 .profile-title .subtitle {
-    color: var(--text-light);
-    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-size: 1.2rem;
     margin-bottom: 1rem;
 }
 
@@ -73,20 +78,28 @@
 }
 
 .social-links a {
-    color: var(--text-muted);
+    color: var(--bg-color);
+    background-color: var(--text-muted);
+    /* Inverted look */
     font-size: 1.1rem;
+    padding: 0.2rem 0.5rem;
+    border: 1px solid var(--text-muted);
 }
 
 .social-links a:hover {
-    color: var(--primary-color);
+    color: var(--text-main);
+    background-color: var(--bg-color);
+    border: 1px dashed var(--text-main);
 }
 
 .profile-right {
     flex: 1;
-    background-color: var(--surface-color-2);
+    background-color: var(--surface-color-1);
     padding: 1.5rem;
-    border-radius: var(--border-radius-md);
-    border: 1px solid var(--border-color);
+    border-radius: 0;
+    border: 2px solid var(--border-color);
+    box-shadow: 4px 4px 0px var(--border-color);
+    /* Inner block shape */
 }
 
 .info-grid {
@@ -103,15 +116,20 @@
 }
 
 .info-label {
-    color: var(--text-light);
-    font-size: 0.7rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
     font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+}
+
+.info-label::before {
+    content: "> ";
+    /* Terminal prompt styling */
 }
 
 .info-value {
     color: var(--text-main);
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -124,11 +142,15 @@
 
 .download-cv {
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: none;
+    /* No smooth transition */
+    text-decoration: underline;
+    /* classic link style */
 }
 
 .download-cv:hover {
-    color: var(--primary-color);
+    color: var(--bg-color);
+    background-color: var(--text-main);
 }
 
 .download-cv .info-icon {
@@ -141,6 +163,9 @@
         flex-direction: column;
         padding: 1.5rem;
         align-items: stretch;
+        box-shadow: none;
+        border-bottom-width: 4px;
+        /* Heavy bottom border for mobile */
     }
 
     .profile-left {

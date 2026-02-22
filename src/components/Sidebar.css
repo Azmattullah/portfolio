@@ -4,12 +4,14 @@
     left: 20px;
     transform: translateY(-50%);
     background-color: var(--surface-color-1);
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--border-color);
+    /* Thicker, solid border */
     border-radius: var(--border-radius-lg);
     padding: 1rem 0;
     width: 90px;
     z-index: 50;
-    box-shadow: var(--shadow-main);
+    box-shadow: 4px 4px 0px var(--border-color);
+    /* Retro block shadow */
 }
 
 .nav-menu {
@@ -36,31 +38,40 @@
     flex-direction: column;
     align-items: center;
     gap: 0.3rem;
-    color: var(--text-light);
-    font-size: 0.65rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    /* slightly larger for pixel font */
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: none;
+    /* remove smooth transition */
     width: 70px;
     height: 70px;
     justify-content: center;
     border-radius: var(--border-radius-sm);
+    border: 1px dashed transparent;
+    /* prepare for hover */
 }
 
 .icon-wrapper {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 2px;
 }
 
 .nav-link:hover {
     color: var(--text-main);
+    border: 1px dashed var(--border-color);
+    /* retro hover */
+    background-color: var(--surface-color-2);
 }
 
-/* Active State Styling like screenshot */
+/* Active State Styling */
 .nav-item.active .nav-link {
     background-color: var(--primary-color);
-    color: var(--text-main);
-    box-shadow: var(--shadow-glow);
-    border-radius: 12px;
+    color: var(--bg-color);
+    /* invert colors for active */
+    box-shadow: none;
+    border-radius: 0;
+    border: 1px solid var(--primary-color);
 }
 
 /* Responsive for mobile (moves to bottom) */
@@ -72,8 +83,11 @@
         transform: none;
         width: 100%;
         height: 70px;
-        border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+        border-radius: 0;
+        border: none;
+        border-top: 2px solid var(--border-color);
         padding: 0;
+        box-shadow: none;
     }
 
     .nav-list {
@@ -82,23 +96,32 @@
         align-items: center;
         height: 100%;
         margin-bottom: 0;
+        gap: 0;
+        /* remove gap for tight links */
     }
 
     .nav-item {
         width: auto;
         flex: 1;
+        border-right: 1px dashed var(--border-color);
+        /* separators */
+    }
+
+    .nav-item:last-child {
+        border-right: none;
     }
 
     .nav-link {
         height: 100%;
         width: 100%;
         border-radius: 0;
+        border: none;
     }
 
     .nav-item.active .nav-link {
-        border-radius: var(--border-radius-sm);
-        height: calc(100% - 10px);
-        width: calc(100% - 10px);
-        margin: 5px;
+        border-radius: 0;
+        height: 100%;
+        width: 100%;
+        margin: 0;
     }
 }

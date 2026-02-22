@@ -4,19 +4,36 @@
   /* Container is already flex-column & handled in index.css */
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from {
+/* Animations - Jerky terminal style instead of smooth fade */
+@keyframes terminalOn {
+  0% {
     opacity: 0;
-    transform: translateY(20px);
   }
 
-  to {
+  10% {
     opacity: 1;
-    transform: translateY(0);
+    text-shadow: none;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+    text-shadow: var(--shadow-glow);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 
 .fade-in {
-  animation: fadeIn 0.5s ease forwards;
+  animation: terminalOn 0.5s step-end forwards;
+  /* Step-end makes it jumpy/instantaneous */
 }

@@ -1,32 +1,43 @@
 .content-area {
     background-color: var(--surface-color-1);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius-lg);
+    border: 2px solid var(--border-color);
+    /* Thicker solid border */
+    border-radius: 0;
     padding: 3rem;
-    box-shadow: var(--shadow-main);
+    box-shadow: 8px 8px 0px var(--border-color);
+    /* Retro block shadow */
     position: relative;
     z-index: 10;
 }
 
 .section-title {
-    font-size: 2.2rem;
-    font-weight: 600;
+    font-size: 2.5rem;
+    /* Larger */
+    font-weight: 400;
     margin-bottom: 2rem;
     position: relative;
     display: inline-block;
+    color: var(--text-main);
+    text-transform: uppercase;
+}
+
+.section-title::before {
+    content: "=== ";
+    /* classic terminal header */
+}
+
+.section-title::after {
+    content: " ===";
 }
 
 .title-underline {
-    height: 4px;
-    width: 40px;
-    background: linear-gradient(to right, var(--accent-red), var(--accent-blue));
-    border-radius: 2px;
-    margin-top: 5px;
+    display: none;
+    /* remove smooth gradient underline */
 }
 
 .about-text {
     color: var(--text-muted);
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.8;
     display: flex;
     flex-direction: column;
@@ -35,9 +46,14 @@
 }
 
 .sub-section-title {
-    font-size: 1.6rem;
-    font-weight: 600;
+    font-size: 1.8rem;
+    font-weight: 400;
     margin-bottom: 1.5rem;
+    color: var(--text-main);
+    border-bottom: 2px dashed var(--border-color);
+    /* retro underline */
+    padding-bottom: 0.5rem;
+    display: inline-block;
 }
 
 .services-grid {
@@ -58,49 +74,74 @@
     font-size: 1.5rem;
     filter: grayscale(100%);
     opacity: 0.7;
-    transition: all 0.3s ease;
+    transition: none;
+    /* No smooth transitions */
     cursor: pointer;
+    border: 1px dotted transparent;
+    padding: 5px;
 }
 
 .client-logo:hover {
-    filter: grayscale(0%);
+    filter: none;
     opacity: 1;
+    border: 1px dotted var(--text-main);
+    background-color: var(--surface-color-2);
 }
 
 /* Footer Status Area */
 .content-footer {
     text-align: center;
-    border-top: 1px solid var(--border-color);
+    border-top: 2px dashed var(--border-color);
     padding-top: 1rem;
-    color: var(--text-light);
-    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-size: 1rem;
 }
 
 .content-footer a {
-    color: var(--primary-color);
-    margin: 0 0.2rem;
+    color: var(--text-main);
+    margin: 0 0.5rem;
+    text-decoration: underline;
 }
 
 .content-footer a:hover {
-    text-decoration: underline;
+    background-color: var(--text-main);
+    color: var(--bg-color);
 }
 
 .status-dot {
     display: inline-block;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    border-radius: 0;
+    /* Square dot */
     margin-right: 5px;
 }
 
 .status-dot.warning {
     background-color: var(--accent-red);
-    box-shadow: 0 0 8px var(--accent-red);
+    box-shadow: none;
+    /* no glow */
+    border: 1px solid var(--text-main);
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
 
 @media (max-width: 768px) {
     .content-area {
         padding: 1.5rem;
+        box-shadow: none;
+        border-bottom-width: 4px;
     }
 
     .services-grid {

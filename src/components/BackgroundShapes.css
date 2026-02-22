@@ -1,77 +1,26 @@
+/* Replace shapes with a CRT scanline or retro grid effect */
 .bg-shapes-container {
-    position: absolute;
+    position: fixed;
+    /* Cover the whole background instead of absolute top-left */
     top: 0;
     left: 0;
-    width: 400px;
-    height: 400px;
-    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    /* Put it ON TOP of everything */
     pointer-events: none;
+    /* So you can click through it */
     overflow: hidden;
+
+    /* CRT Scanline effect */
+    background: linear-gradient(transparent 50%,
+            rgba(0, 0, 0, 0.25) 50%);
+    background-size: 100% 4px;
+    /* Thin scanlines */
+    opacity: 0.8;
 }
 
-/* Base shape styles - using borders for triangles */
+/* Hide the old triangle shapes since they don't fit the terminal theme */
 .shape {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    opacity: 0.9;
-}
-
-/* We will approximate the abstract layout from the screenshot */
-.shape-1 {
-    /* Big Red Triangle */
-    border-width: 0 150px 150px 150px;
-    border-color: transparent transparent var(--accent-red) transparent;
-    top: -40px;
-    left: -20px;
-    transform: rotate(-30deg);
-}
-
-.shape-2 {
-    /* Bright Orange Triangle */
-    border-width: 120px 120px 0 0;
-    border-color: #ff6600 transparent transparent transparent;
-    top: 10px;
-    left: 100px;
-}
-
-.shape-3 {
-    /* Yellow Triangle */
-    border-width: 0 0 100px 100px;
-    border-color: transparent transparent var(--accent-yellow) transparent;
-    top: 120px;
-    left: 170px;
-}
-
-.shape-4 {
-    /* Blue Triangle */
-    border-width: 130px 0 0 130px;
-    border-color: transparent transparent transparent var(--accent-blue);
-    top: 120px;
-    left: 10px;
-}
-
-.shape-5 {
-    /* Cyan Triangle */
-    border-width: 0 90px 90px 0;
-    border-color: transparent var(--accent-cyan) transparent transparent;
-    top: 200px;
-    left: 20px;
-}
-
-.shape-6 {
-    /* Dark Red/Pink Triangle */
-    border-width: 80px 80px 0 0;
-    border-color: #e6005c transparent transparent transparent;
-    top: 250px;
-    left: 120px;
-}
-
-.shape-7 {
-    /* Small Orange Triangle out to the right */
-    border-width: 15px 0 15px 25px;
-    border-color: transparent transparent transparent var(--accent-yellow);
-    top: 100px;
-    left: 250px;
+    display: none;
 }
