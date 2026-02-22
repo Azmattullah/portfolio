@@ -4,6 +4,7 @@ import ServiceCard from './ServiceCard';
 import Resume from './Resume';
 import Portfolio from './Portfolio';
 import Contact from './Contact';
+import Blog from './Blog';
 import { userData } from '../data/userData';
 
 const ContentArea = () => {
@@ -31,6 +32,9 @@ const ContentArea = () => {
         }
         if (activeTab === 'contact') {
             return <Contact />;
+        }
+        if (activeTab === 'blog') {
+            return <Blog />;
         }
 
         // Default to 'about' content
