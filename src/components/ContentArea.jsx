@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import './ContentArea.css';
 import ServiceCard from './ServiceCard';
 import Resume from './Resume';
+import Portfolio from './Portfolio';
+import Contact from './Contact';
 import { userData } from '../data/userData';
 
 const ContentArea = () => {
@@ -23,6 +25,12 @@ const ContentArea = () => {
     const renderContent = () => {
         if (activeTab === 'resume') {
             return <Resume />;
+        }
+        if (activeTab === 'portfolio') {
+            return <Portfolio />;
+        }
+        if (activeTab === 'contact') {
+            return <Contact />;
         }
 
         // Default to 'about' content
