@@ -1,0 +1,64 @@
+.resume-section {
+    width: 100%;
+}
+
+.resume-timeline-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.icon-box {
+    width: 45px;
+    height: 45px;
+    background-color: var(--surface-color-2);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-container {
+    margin-left: 20px;
+    margin-bottom: 3rem;
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.min-timeline .timeline-item {
+    margin-bottom: 1.5rem;
+}
+
+.min-timeline .timeline-desc {
+    display: none;
+    /* Hide points for education */
+}
+
+
+.skills-card {
+    background-color: var(--surface-color-2);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+}

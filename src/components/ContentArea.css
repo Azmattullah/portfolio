@@ -1,0 +1,109 @@
+.content-area {
+    background-color: var(--surface-color-1);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-lg);
+    padding: 3rem;
+    box-shadow: var(--shadow-main);
+    position: relative;
+    z-index: 10;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.title-underline {
+    height: 4px;
+    width: 40px;
+    background: linear-gradient(to right, var(--accent-red), var(--accent-blue));
+    border-radius: 2px;
+    margin-top: 5px;
+}
+
+.about-text {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.sub-section-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.clients-list {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    align-items: center;
+}
+
+.client-logo {
+    font-size: 1.5rem;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.client-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Footer Status Area */
+.content-footer {
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+    color: var(--text-light);
+    font-size: 0.85rem;
+}
+
+.content-footer a {
+    color: var(--primary-color);
+    margin: 0 0.2rem;
+}
+
+.content-footer a:hover {
+    text-decoration: underline;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.status-dot.warning {
+    background-color: var(--accent-red);
+    box-shadow: 0 0 8px var(--accent-red);
+}
+
+@media (max-width: 768px) {
+    .content-area {
+        padding: 1.5rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
