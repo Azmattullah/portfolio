@@ -1,9 +1,12 @@
+import projectThumbnail from '../assets/images/project_thumbnail.png';
+import certThumbnail from '../assets/images/certificate_thumbnail.png';
+
 export const portfolioData = [
   {
     id: 1,
     title: "National Tech Titans League - Software Development",
     category: "Project",
-    image: "/images/project_thumbnail.png",
+    image: projectThumbnail,
     tags: ["Laravel"],
     link: "https://www.bestcast.co"
   },
@@ -11,7 +14,7 @@ export const portfolioData = [
     id: 2,
     title: "Webmail",
     category: "Project",
-    image: "/images/project_thumbnail.png",
+    image: projectThumbnail,
     tags: ["React"],
     link: "https://www.bestcast.co"
 
@@ -20,7 +23,7 @@ export const portfolioData = [
     id: 3,
     title: "Intranet Website",
     category: "Project",
-    image: "/images/project_thumbnail.png",
+    image: projectThumbnail,
     tags: ["React"],
     link: "https://www.bestcast.co"
 
@@ -29,7 +32,7 @@ export const portfolioData = [
     id: 4,
     title: "mini POS",
     category: "Project",
-    image: "/images/project_thumbnail.png",
+    image: projectThumbnail,
     tags: ["React", "Go"],
     link: "#"
   },
@@ -37,7 +40,7 @@ export const portfolioData = [
     id: 5,
     title: "DTS 2018 - CCNA Cybersecurity Operations",
     category: "Certifications",
-    image: "/images/certificate_thumbnail.png",
+    image: certThumbnail,
     tags: ["Certificate"],
     link: "#"
   },
@@ -45,7 +48,7 @@ export const portfolioData = [
     id: 6,
     title: "GCP - Associate Cloud Engineer",
     category: "Certifications",
-    image: "/images/certificate_thumbnail.png",
+    image: certThumbnail,
     tags: ["Verify", "Certificate"],
     link: "#"
   },
@@ -53,7 +56,7 @@ export const portfolioData = [
     id: 7,
     title: "Dicoding - Cloud Practitioner Essentials",
     category: "Certifications",
-    image: "/images/certificate_thumbnail.png",
+    image: certThumbnail,
     tags: ["Certificate"],
     link: "#"
   },
@@ -61,7 +64,7 @@ export const portfolioData = [
     id: 8,
     title: "TryHackMe Badge",
     category: "Badge",
-    image: "/images/certificate_thumbnail.png",
+    image: certThumbnail,
     tags: ["Profile"],
     link: "#"
   }
