@@ -1,43 +1,60 @@
 .content-area {
     background-color: var(--surface-color-1);
     border: 2px solid var(--border-color);
-    /* Thicker solid border */
     border-radius: 0;
-    padding: 3rem;
-    box-shadow: 8px 8px 0px var(--border-color);
-    /* Retro block shadow */
+    /* Create the gray window title bar using padding and background-image */
+    padding: 3.5rem 3rem 3rem 3rem;
+    /* extra top padding for the bar */
+    background-image: linear-gradient(to bottom, var(--window-bar) 0%, var(--window-bar) 2rem, var(--surface-color-1) 2rem, var(--surface-color-1) 100%);
+    box-shadow: 4px 4px 0px var(--border-color);
     position: relative;
     z-index: 10;
 }
 
+/* Add the window control circles */
+.content-area::before {
+    content: "";
+    position: absolute;
+    top: 0.6rem;
+    left: 1rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: var(--surface-color-1);
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    box-shadow: 1.2rem 0 0 0 var(--surface-color-1), 1.2rem 0 0 0 inset var(--border-color);
+}
+
 .section-title {
     font-size: 2.5rem;
-    /* Larger */
-    font-weight: 400;
+    font-weight: 700;
     margin-bottom: 2rem;
     position: relative;
     display: inline-block;
     color: var(--text-main);
-    text-transform: uppercase;
+    text-transform: capitalize;
+    /* More standard OS casing */
 }
 
-.section-title::before {
-    content: "=== ";
-    /* classic terminal header */
-}
-
+/* Remove terminal "===" styling */
+.section-title::before,
 .section-title::after {
-    content: " ===";
+    display: none;
 }
 
 .title-underline {
-    display: none;
-    /* remove smooth gradient underline */
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 4px;
+    width: 60px;
+    background-color: var(--border-color);
+    /* solid black line */
 }
 
 .about-text {
     color: var(--text-muted);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.8;
     display: flex;
     flex-direction: column;
@@ -47,11 +64,11 @@
 
 .sub-section-title {
     font-size: 1.8rem;
-    font-weight: 400;
+    font-weight: 700;
     margin-bottom: 1.5rem;
     color: var(--text-main);
-    border-bottom: 2px dashed var(--border-color);
-    /* retro underline */
+    border-bottom: 2px solid var(--border-color);
+    /* solid line */
     padding-bottom: 0.5rem;
     display: inline-block;
 }
@@ -91,10 +108,10 @@
 /* Footer Status Area */
 .content-footer {
     text-align: center;
-    border-top: 2px dashed var(--border-color);
+    border-top: 2px solid var(--border-color);
     padding-top: 1rem;
     color: var(--text-muted);
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .content-footer a {
@@ -104,44 +121,30 @@
 }
 
 .content-footer a:hover {
-    background-color: var(--text-main);
-    color: var(--bg-color);
+    background-color: var(--surface-color-2);
 }
 
 .status-dot {
     display: inline-block;
     width: 12px;
     height: 12px;
-    border-radius: 0;
-    /* Square dot */
+    border-radius: 50%;
+    /* Circle dot */
     margin-right: 5px;
 }
 
 .status-dot.warning {
-    background-color: var(--accent-red);
+    background-color: var(--accent-yellow);
     box-shadow: none;
-    /* no glow */
-    border: 1px solid var(--text-main);
-    animation: blink 1s step-end infinite;
-}
-
-@keyframes blink {
-
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
+    border: 2px solid var(--text-main);
 }
 
 @media (max-width: 768px) {
     .content-area {
-        padding: 1.5rem;
-        box-shadow: none;
-        border-bottom-width: 4px;
+        padding: 3rem 1.5rem 1.5rem 1.5rem;
+        /* keep top space for window bar */
+        box-shadow: 4px 4px 0px var(--border-color);
+        /* Retain window shadow */
     }
 
     .services-grid {

@@ -3,15 +3,13 @@
     top: 50%;
     left: 20px;
     transform: translateY(-50%);
-    background-color: var(--surface-color-1);
+    background-color: var(--surface-color-2);
     border: 2px solid var(--border-color);
-    /* Thicker, solid border */
     border-radius: var(--border-radius-lg);
     padding: 1rem 0;
     width: 90px;
     z-index: 50;
     box-shadow: 4px 4px 0px var(--border-color);
-    /* Retro block shadow */
 }
 
 .nav-menu {
@@ -40,16 +38,14 @@
     gap: 0.3rem;
     color: var(--text-muted);
     font-size: 0.8rem;
-    /* slightly larger for pixel font */
-    font-weight: 500;
+    font-weight: 700;
+    /* Bolder font for OS theme */
     transition: none;
-    /* remove smooth transition */
     width: 70px;
     height: 70px;
     justify-content: center;
     border-radius: var(--border-radius-sm);
-    border: 1px dashed transparent;
-    /* prepare for hover */
+    border: 2px solid transparent;
 }
 
 .icon-wrapper {
@@ -59,19 +55,24 @@
 
 .nav-link:hover {
     color: var(--text-main);
-    border: 1px dashed var(--border-color);
-    /* retro hover */
-    background-color: var(--surface-color-2);
+    border: 2px solid var(--border-color);
+    background-color: var(--surface-color-1);
+    box-shadow: 2px 2px 0px var(--border-color);
+}
+
+.nav-link:active {
+    box-shadow: 0px 0px 0px var(--border-color);
+    transform: translate(2px, 2px);
 }
 
 /* Active State Styling */
 .nav-item.active .nav-link {
-    background-color: var(--primary-color);
+    background-color: var(--text-main);
     color: var(--bg-color);
-    /* invert colors for active */
-    box-shadow: none;
+    box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.5);
+    /* Pressed in look */
     border-radius: 0;
-    border: 1px solid var(--primary-color);
+    border: 2px solid var(--text-main);
 }
 
 /* Responsive for mobile (moves to bottom) */
@@ -88,6 +89,7 @@
         border-top: 2px solid var(--border-color);
         padding: 0;
         box-shadow: none;
+        background-color: var(--surface-color-2);
     }
 
     .nav-list {
@@ -97,14 +99,12 @@
         height: 100%;
         margin-bottom: 0;
         gap: 0;
-        /* remove gap for tight links */
     }
 
     .nav-item {
         width: auto;
         flex: 1;
-        border-right: 1px dashed var(--border-color);
-        /* separators */
+        border-right: 2px solid var(--border-color);
     }
 
     .nav-item:last-child {
@@ -123,5 +123,7 @@
         height: 100%;
         width: 100%;
         margin: 0;
+        box-shadow: inset 0px 4px 0px rgba(0, 0, 0, 0.2);
+        /* pressed in from top */
     }
 }

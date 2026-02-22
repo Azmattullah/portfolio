@@ -11,9 +11,8 @@
     top: 10px;
     bottom: -30px;
     width: 2px;
-    background-color: transparent;
-    border-left: 2px dashed var(--border-color);
-    /* Dashed timeline vertical line */
+    background-color: var(--border-color);
+    /* solid line */
 }
 
 .timeline-item:last-child::before {
@@ -26,39 +25,38 @@
     top: 5px;
     width: 14px;
     height: 14px;
-    border-radius: 0;
-    /* Square dot */
-    background-color: var(--bg-color);
+    border-radius: 50%;
+    /* Circle dot */
+    background-color: var(--surface-color-2);
     border: 2px solid var(--border-color);
-    /* Hollow square */
-    box-shadow: none;
+    box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
 .timeline-title {
     font-size: 1.3rem;
-    /* larger */
-    font-weight: 400;
+    font-weight: 700;
+    /* bold for OS style */
     color: var(--text-main);
     margin-bottom: 0.2rem;
-    text-transform: uppercase;
 }
 
 .timeline-date {
-    display: block;
-    font-size: 1rem;
-    color: var(--bg-color);
-    background-color: var(--text-muted);
-    /* Inverted badge look */
     display: inline-block;
-    padding: 0 5px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-main);
+    background-color: var(--surface-color-2);
+    /* window-like badge */
+    border: 1px solid var(--border-color);
+    padding: 2px 8px;
     margin-bottom: 0.5rem;
+    border-radius: var(--border-radius-sm);
 }
 
 .timeline-subtitle {
     font-size: 1.1rem;
     font-weight: 400;
-    color: var(--border-color);
-    /* Green */
+    color: var(--text-muted);
     margin-bottom: 0.8rem;
 }
 
@@ -67,8 +65,8 @@
     color: var(--text-muted);
     line-height: 1.6;
     padding-left: 15px;
-    list-style-type: square;
-    /* Square bullets */
+    list-style-type: disc;
+    /* normal bullets */
 }
 
 .timeline-desc li {

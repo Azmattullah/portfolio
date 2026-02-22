@@ -12,17 +12,16 @@
 .icon-box {
     width: 45px;
     height: 45px;
-    background-color: var(--bg-color);
+    background-color: var(--surface-color-2);
     border: 2px solid var(--border-color);
     border-radius: 0;
-    /* Blocky */
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--primary-color);
+    color: var(--text-main);
+    /* Black icon */
     font-size: 1.5rem;
-    box-shadow: 4px 4px 0px var(--border-color);
-    /* Retro shadow */
+    box-shadow: 2px 2px 0px var(--border-color);
 }
 
 .timeline-container {
@@ -43,14 +42,11 @@
 
 .min-timeline .timeline-desc {
     display: none;
-    /* Hide points for education */
 }
 
-
 .skills-card {
-    background-color: var(--surface-color-1);
-    border: 2px dashed var(--border-color);
-    /* Dashed retro border */
+    background-color: var(--surface-color-2);
+    border: 2px solid var(--border-color);
     border-radius: 0;
     padding: 2rem;
     margin-bottom: 1.5rem;

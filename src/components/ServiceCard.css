@@ -1,7 +1,6 @@
 .service-card {
-    background-color: transparent;
-    border: 2px dashed var(--border-color);
-    /* Dashed retro border */
+    background-color: var(--surface-color-2);
+    border: 2px solid var(--border-color);
     border-radius: 0;
     padding: 1.5rem;
     display: flex;
@@ -10,19 +9,16 @@
     text-align: center;
     gap: 1rem;
     transition: none;
-    /* remove smooth transition */
-    box-shadow: none;
+    box-shadow: 4px 4px 0px var(--border-color);
+    /* Default shadow for window */
 }
 
 .service-card:hover {
-    background-color: var(--surface-color-2);
-    border-style: solid;
-    /* solid on hover */
-    border-color: var(--text-main);
-    transform: none;
-    /* No float effect */
-    box-shadow: 4px 4px 0px var(--border-color);
-    /* Block retro shadow */
+    background-color: var(--surface-color-1);
+    box-shadow: 0px 0px 0px var(--border-color);
+    /* pressed in */
+    transform: translate(4px, 4px);
+    /* pressed in */
 }
 
 .service-icon {
