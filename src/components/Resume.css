@@ -57,8 +57,21 @@
     margin-top: 2rem;
 }
 
+.tech-stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
 @media (max-width: 768px) {
     .education-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .tech-stack-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     }
 }

@@ -74,41 +74,41 @@ export const blogData = [
     image: projectThumbnail,
     series: "Docker Projects",
     content: "<p>This is a placeholder for the Docker Swarm post content.</p>"
-  },
-  {
-    id: 3,
-    title: "Post Deployment: Monitoring and Error Tracking",
-    date: { day: "25", month: "Aug", year: "2023" },
-    excerpt: "For status monitoring of applications (built with frontend and backend) I use the Status Pages from...",
-    image: projectThumbnail,
-    series: "Monitoring",
-    content: "<p>This is a placeholder for the monitoring post content.</p>"
-  },
-  {
-    id: 4,
-    title: "Database Setup: MongoDB",
-    date: { day: "22", month: "Aug", year: "2023" },
-    excerpt: "Strapi currently supports several databases, one of which is MongoDB. Apart from MongoDB, Strapi is...",
-    image: projectThumbnail,
-    series: "Database",
-    content: "<p>This is a placeholder for the database setup post content.</p>"
-  },
-  {
-    id: 5,
-    title: "Vue Setup: Design, Plugins and Deploy",
-    date: { day: "19", month: "Aug", year: "2023" },
-    excerpt: "How I Setup Design, Plugin and Deploy.",
-    image: projectThumbnail,
-    series: "Frontend",
-    content: "<p>This is a placeholder for the Vue setup post content.</p>"
-  },
-  {
-    id: 6,
-    title: "Strapi Setup: Customize Response API",
-    date: { day: "19", month: "Aug", year: "2023" },
-    excerpt: "Here I share how to customize the response from the API. By default the responses given, but there ar...",
-    image: projectThumbnail,
-    series: "Backend",
-    content: "<p>This is a placeholder for the Strapi API customization post content.</p>"
   }
+  // {
+  //   id: 3,
+  //   title: "Post Deployment: Monitoring and Error Tracking",
+  //   date: { day: "25", month: "Aug", year: "2023" },
+  //   excerpt: "For status monitoring of applications (built with frontend and backend) I use the Status Pages from...",
+  //   image: projectThumbnail,
+  //   series: "Monitoring",
+  //   content: "<p>This is a placeholder for the monitoring post content.</p>"
+  // },
+  // {
+  //   id: 4,
+  //   title: "Database Setup: MongoDB",
+  //   date: { day: "22", month: "Aug", year: "2023" },
+  //   excerpt: "Strapi currently supports several databases, one of which is MongoDB. Apart from MongoDB, Strapi is...",
+  //   image: projectThumbnail,
+  //   series: "Database",
+  //   content: "<p>This is a placeholder for the database setup post content.</p>"
+  // },
+  // {
+  //   id: 5,
+  //   title: "Vue Setup: Design, Plugins and Deploy",
+  //   date: { day: "19", month: "Aug", year: "2023" },
+  //   excerpt: "How I Setup Design, Plugin and Deploy.",
+  //   image: projectThumbnail,
+  //   series: "Frontend",
+  //   content: "<p>This is a placeholder for the Vue setup post content.</p>"
+  // },
+  // {
+  //   id: 6,
+  //   title: "Strapi Setup: Customize Response API",
+  //   date: { day: "19", month: "Aug", year: "2023" },
+  //   excerpt: "Here I share how to customize the response from the API. By default the responses given, but there ar...",
+  //   image: projectThumbnail,
+  //   series: "Backend",
+  //   content: "<p>This is a placeholder for the Strapi API customization post content.</p>"
+  // }
 ];

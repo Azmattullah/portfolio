@@ -1,6 +1,7 @@
 import './Resume.css';
 import TimelineItem from './TimelineItem';
 import SkillBar from './SkillBar';
+import TechStackCard from './TechStackCard';
 import { MdOutlineWorkOutline, MdOutlineMenuBook } from 'react-icons/md';
 import { userData } from '../data/userData';
 
@@ -80,10 +81,15 @@ const Resume = () => {
                 ))}
             </div>
 
-            <h3 className="sub-section-title mt-2">Code Skills</h3>
-            <div className="skills-card">
+            <h3 className="sub-section-title mt-2">Tech Stack</h3>
+            <div className="tech-stack-grid">
                 {resume.codeSkills.map((skill) => (
-                    <SkillBar key={skill.id} skillName={skill.name} percentage={skill.percentage} />
+                    <TechStackCard
+                        key={skill.id}
+                        name={skill.name}
+                        category={skill.category}
+                        icon={skill.icon}
+                    />
                 ))}
             </div>
         </section>
