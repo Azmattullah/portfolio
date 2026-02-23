@@ -120,6 +120,24 @@ textarea.form-input {
     /* Pressed effect */
 }
 
+.submit-success {
+    color: #008700;
+    /* Matching a generic green tone or adjusting for theme */
+    font-weight: 700;
+    margin-top: 1rem;
+    text-align: right;
+    animation: fadeIn 0.3s ease;
+}
+
+.submit-error {
+    color: #ff3c3cff;
+    /* From existing portfolio colors */
+    font-weight: 700;
+    margin-top: 1rem;
+    text-align: right;
+    animation: fadeIn 0.3s ease;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .form-row {
