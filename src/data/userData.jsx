@@ -112,7 +112,7 @@ export const userData = {
                 id: 1,
                 title: "Dicoding MLOps",
                 date: "Nov 2025 - Present",
-                subtitle: "Belajar Membangun Arsitektur Cloud AWS"
+                subtitle: "MLOps by Abhishek Veeramalla"
             }
         ],
         skills: [
