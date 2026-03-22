@@ -38,9 +38,9 @@ const ProfileHeader = () => {
 
                     <div className="info-item">
                         <span className="info-label">CV</span>
-                        <span className="info-value download-cv">
+                        <a href="/Azmattullah_DevOps_Resume.pdf" download="Azmattullah_DevOps_Resume.pdf" className="info-value download-cv" style={{ textDecoration: 'none', color: 'inherit' }}>
                             Download <MdOutlineFileDownload className="info-icon" />
-                        </span>
+                        </a>
                     </div>
 
                     <div className="info-item">
